@@ -1,0 +1,24 @@
+Most Used COmmands:-
+------------------
+1) driver.get("URL");
+2) element.sendKeys("inputtext");
+3) element.clear();
+4) select.deselectAll()
+5) select.selectByVisibleText("some text");
+
+-------------------------------------
+
+1) driver.swithTo().window("windowName");
+2) driver.swithTo().frame("frame");
+3) driver.switchTo().alert();
+
+--------------------------------------
+driver.navigate().to("URL");
+driver.navigate().forward();
+driver.navigate().back();
+driver.close();
+driver.quite();
+driver.refresh();
+
+----------------------------------------
+
