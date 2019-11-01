@@ -1,0 +1,26 @@
+syntax :
+
+Xpath=//tagname[@attribute='Value']
+
+Relative Xpath=//*[@class='value1']//*[text()='Testing']
+
+
+2) Contains():
+//*[contains(@attribuename,'value')
+
+3)//*[contains(text(),'here')]
+
+Xpath=//*[@type='submit' or @name='btnReset']
+
+
+Xpath=//input[@type='submit' and @name='btnLogin']
+
+4) Start-with function:
+
+Xpath=//label[starts-with(@id,'message')]
+
+5) Text():
+
+5)Xpath=//td[text()='UserID']				
+
+
