@@ -1,4 +1,11 @@
+contact :
+
 //*[text()='Name']/../../../../../../../../../../..//td[1]//following::a[1]
 
 
 find the parant node and then move to child
+
+
+Case:
+
+//span[text()='Case']//following::tr//descendant::a[@data-aura-class='forceOutputLookup'] 
