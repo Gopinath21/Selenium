@@ -1,0 +1,52 @@
+https://stackoverflow.com/questions/3401343/scroll-element-into-view-with-selenium
+
+
+WebElement element = driver.findElement(By.id("id_of_element"));
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+Thread.sleep(500); 
+
+
+
+WebElement element = driver.findElement(By.id("my-id"));
+Actions actions = new Actions(driver);
+actions.moveToElement(element);
+actions.perform();
+
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("javascript:window.scrollBy(250,350)");
+        
+        
+        This is why you use js.ExecuteScript("arguments[0].scrollIntoView(true);" + "window.scrollBy(0,-100);", e); for IE and Firefox and js.ExecuteScript("arguments[0].scrollIntoViewIfNeeded(true);", e); for Chrome
+        
+        
+        
+        //initialize element
+WebElement element = driver.findElement(By.id("..."));
+
+//get position
+int x = element.getLocation().getX();
+int y = element.getLocation().getY();
+
+//scroll to x y 
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(" +x +", " +y +")");
+
+
+
+0
+
+The default behavior of Selenium us to scroll so the element is barely in view at the top of the viewport. Also, not all browsers have the exact same behavior. This is very dis-satisfying. If you record videos of your browser tests, like I do, what you want is for the element to scroll into view and be vertically centered.
+hat you want is for the element to scroll into view and be vertically centered.
+
+public List<String> getBoundedRectangleOfElement(WebElement we)
+{
+    JavascriptExecutor je = (JavascriptExecutor) driver;
+    List<String> bounds = (ArrayList<String>) je.executeScript(
+            "var rect = arguments[0].getBoundingClientRect();" +
+                    "return [ '' + parseInt(rect.left), '' + parseInt(rect.top), '' + parseInt(rect.width), '' + parseInt(rect.height) ]", we);
+    System.out.println("top: " + bounds.get(1));
+    return bounds;
+}
+
+
