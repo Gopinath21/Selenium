@@ -9,3 +9,13 @@ find the parant node and then move to child
 Case:
 
 //span[text()='Case']//following::tr//descendant::a[@data-aura-class='forceOutputLookup'] 
+
+
+1)find the coloum name xpath
+2)find the data row cell xpath
+3)navigate to those element with the /../ 
+4)using other notes to movie forward or backward 
+
+
+
+Note: /../ used to help move forward or backward
