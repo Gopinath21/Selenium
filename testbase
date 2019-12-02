@@ -1,4 +1,4 @@
-
+Testbase class
 
 1)Before suit
 2)After suit
@@ -16,5 +16,5 @@ what need to do
 Test cases:
 
 1)holds the which POM class requied the to execute the test cases , 
-here it pass teh POM class name to the "Testbase" class to get the instance loaded 
+here it pass the POM class name to the "Testbase" class to get the instance loaded 
 2)All test cases extends the "testbase" class
